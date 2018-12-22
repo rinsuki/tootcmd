@@ -26,7 +26,7 @@ func main() {
 		panic(err)
 	}
 	req.Header.Set("Authorization", fmt.Sprintf("Bearer %s", os.Getenv("MASTODON_ACCESS_TOKEN")))
-	req.Header.Set("User-Agent", "go-tootcmd/1.0 (+https://github.com/rinsuki/tootcmd")
+	req.Header.Set("User-Agent", "go-tootcmd/1.0 (+https://github.com/rinsuki/tootcmd)")
 	client := new(http.Client)
 	res, err := client.Do(req)
 	if err != nil {
